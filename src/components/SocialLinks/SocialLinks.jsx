@@ -1,11 +1,25 @@
-export default function SocialLinks() {
-    const listLinks = [
-        "GitHub",
-        "Frontend Mentor",
-        "LinkedIn",
-        "Twitter",
-        "Instagram"
+function SocialLinks() {
+    const links = [
+        { label: "GitHub", url: "https://github.com" },
+        { label: "Frontend Mentor", url: "https://frontendmentor.io" },
+        { label: "LikedIn", url: "https://linkedin.com" },
+        { label: "Twitter", url: "https://twitter.com" },
+        { label: "Instagram", url: "https://instagram.com" }
     ]
 
-    return listLinks.map((links, listId) => <li key={listId}><a>{links}</a></li>)
+    return (
+        <nav>
+            <ul>
+                {links.map((link) => (
+                    <li key={link.label}>
+                        <a href={link.url} target="_blank" rel="noopener noreferrer">
+                            {link.label}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    )
 }
+
+export default SocialLinks
