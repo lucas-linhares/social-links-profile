@@ -1,0 +1,146 @@
+/* reset.css — Modern Reset + sensible defaults
+   Usage: import './styles/reset.css' in src/main.jsx (Vite + React)
+*/
+
+/* 1) Box sizing + inheritância */
+:where(html, body, #root) {
+  height: 100%;
+}
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2) Remova margens padrão e use sistema de fontes do usuário como fallback */
+:where(body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd) {
+  margin: 0;
+}
+
+/* 3) Root variables e tipografia base — fácil de ajustar por projeto */
+:root {
+  /* base sizes */
+  font-size: 16px; /* ajustável via media queries se quiser */
+  line-height: 1.5;
+
+  /* accessible color-scheme */
+  color-scheme: light dark;
+
+  /* design tokens (opcionais) */
+  --bg: #fff;
+  --text: #111;
+  --muted: #666;
+  --focus: #2563eb; /* azul, troque se quiser */
+}
+
+/* 4) Body defaults */
+body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 5) Make images, videos, canvas responsive and remove border spacing from tables */
+:where(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6) Remove list styles where desired */
+:where(ol, ul) {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* 7) Links: inherit color, underline on hover (accessible) */
+:where(a) {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+:where(a:hover, a:focus) {
+  text-decoration: underline;
+}
+
+/* 8) Form elements — reset basic appearance, keep accessibility */
+:where(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* But restore accessible focus for keyboard navigation */
+:where(:focus) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* 9) Buttons — give a sensible default while keeping developer control */
+:where(button) {
+  cursor: pointer;
+  background: none;
+  border-radius: 0;
+}
+:where(button[disabled], :where(input[disabled])) {
+  cursor: default;
+  opacity: 0.6;
+}
+
+/* 10) Tables */
+:where(table) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 11) Accessibility helpers */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* 12) Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 13) Utility: help keep long words from breaking layout */
+:where(p, span, a, li, h1, h2, h3, h4, h5, h6) {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 14) Small helper: root-level responsive font-size (optional)
+   Uncomment if you want fluid sizing based on viewport width */
+/*
+@media (min-width: 1024px) {
+  :root { font-size: 18px; }
+}
+*/
+
+/* End of reset.css */
