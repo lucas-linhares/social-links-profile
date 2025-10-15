@@ -1,0 +1,18 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+}
+
+.menu__item {
+    text-align: center;
+    background-color: var(--color-grey-700);
+    border-radius: .5rem;
+}
+
+.menu__link {
+    display: block;
+    padding: .750rem 5.125rem;
+    font-weight: 600;
+}

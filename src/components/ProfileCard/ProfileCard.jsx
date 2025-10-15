@@ -1,3 +1,4 @@
+import styles from './ProfileCard.module.css'
 import avatar from '../../assets/images/avatar-jessica.jpeg'
 import SocialLink from '../SocialLink/SocialLink.jsx'
 
@@ -8,20 +9,22 @@ function ProfileCard() {
     return (
         <div>
             <main>
-                <section>
-                    <header>
-                        <figure>
-                            <img src={profileAvatar} alt='Avatar-profile'/>
-                        </figure>
-                        <div>
-                            <h1>Jessica Randall</h1>
-                            <p>London, United Kingdom</p>
-                        </div>
-                    </header>
-                    
-                    <p>"Front-end developer and avid reader."</p>
-                    <SocialLink />
-                </section>
+                <div className={styles.wrapper}>
+                    <section className={styles.sec}>
+                        <header className={styles.header}>
+                            <figure>
+                                <img src={profileAvatar} alt='Avatar-profile' className={styles.header__avatar}/>
+                            </figure>
+                            <div className={styles.header__content}>
+                                <h1 className={styles.header__mainTitle}>Jessica Randall</h1>
+                                <p className={styles.header__paragraph}>London, United Kingdom</p>
+                            </div>
+                        </header>
+                        
+                        <p className={styles.sec__content}>"Front-end developer and avid reader."</p>
+                        <SocialLink />
+                    </section>
+                </div>
             </main>
         </div>
     )
