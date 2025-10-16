@@ -1,7 +1,7 @@
 import styles from './ProfileCard.module.css'
 import SocialLink from '../SocialLink/SocialLink.jsx'
 import avatarMobile from '../../assets/images/avatar-jessica-mobile.jpg'
-import avatarDesktop from '../../assets/images/avatar-jessica-desktop.jpeg'
+import avatarDesktop from '../../assets/images/avatar-jessica-desktop.jpg'
 
 function ProfileCard() {
 
