@@ -9,6 +9,7 @@
     text-align: center;
     background-color: var(--color-grey-700);
     border-radius: .5rem;
+    transition: background-color .25s ease, color .24s ease;
 }
 
 .menu__link {

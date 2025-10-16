@@ -2,8 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;   
-    height: 100vh;
+    min-height: 100dvh;
 }
 
 .sec {
@@ -44,4 +43,11 @@
 .header__paragraph {
     color: var(--color-green);
     font-weight: 600;
+}
+
+/* Orientation landscape */
+@media (orientation: landscape) {
+    .wrapper {
+        padding: 2rem 0;
+    }
 }
