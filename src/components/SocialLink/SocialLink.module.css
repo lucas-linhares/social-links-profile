@@ -15,4 +15,10 @@
     display: block;
     padding: .750rem 5.125rem;
     font-weight: 600;
+    text-decoration: none;
+}
+
+.menu__item:hover {
+    background-color: var(--color-green);
+    color: var(--color-grey-800);
 }
