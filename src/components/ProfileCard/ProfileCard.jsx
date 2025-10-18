@@ -1,7 +1,7 @@
 import styles from './ProfileCard.module.css'
 import SocialLink from '../SocialLink/SocialLink.jsx'
-import avatarMobile from '../../assets/images/avatar-jessica-mobile.jpg'
-import avatarDesktop from '../../assets/images/avatar-jessica-desktop.jpg'
+import avatarMobile from '../../assets/images/avatar-erick-mobile.png'
+import avatarDesktop from '../../assets/images/avatar-erick-desktop.png'
 
 function ProfileCard() {
 
@@ -17,7 +17,7 @@ function ProfileCard() {
                                 <img src={avatarMobile} alt='Avatar profile' className={styles.header__avatar} />
                             </picture>
                             <div className={styles.header__content}>
-                                <h1 className={styles.header__mainTitle}>Jessica Randall</h1>
+                                <h1 className={styles.header__mainTitle}>Erick Randall</h1>
                                 <p className={styles.header__paragraph}>London, United Kingdom</p>
                             </div>
                         </header>

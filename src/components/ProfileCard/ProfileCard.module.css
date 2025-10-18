@@ -51,3 +51,9 @@
         padding: 2rem 0;
     }
 }
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    .wrapper {
+        padding: 0;
+    }
+}
